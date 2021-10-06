@@ -11,7 +11,7 @@ rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color)
 {
 	rb_tree_t *new;
 
-	new = malloc(sizeof(new)
+	new = malloc(sizeof(rb_tree_t));
 	if (new == NULL)
 		return (NULL);
 
@@ -20,4 +20,6 @@ rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color)
 	new->color = color;
 	new->left = NULL;
 	new->right = NULL;
+
+	return (new);
 }
