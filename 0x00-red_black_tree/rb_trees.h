@@ -45,4 +45,9 @@ rb_tree_t *rb_tree_remove(rb_tree_t *root, int n);
 
 void rb_tree_print(const rb_tree_t *tree);
 
+#define GET_PARENT(x) ((x) == NULL ? NULL : (x)->parent)
+#define GET_GRANDPARENT(x) (GET_PARENT(GET_PARENT(x)))
+#define LEFT_ROTATE 0
+#define RIGHT_ROTATE 1
+
 #endif
