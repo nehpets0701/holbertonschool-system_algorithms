@@ -69,6 +69,19 @@ typedef struct graph_s
     vertex_t    *vertices;
 } graph_t;
 
+/**
+ * struct queue_s - Node in the linked list of edges for a given vertex
+ * @head: Pointer to the head of queue
+ * @tail: Pointer to the tail of queue
+ * @size: size of queue
+ */
+typedef struct queue_s
+{
+	struct edge_s *head;
+	struct edge_s *tail;
+	size_t size;
+} queue_t;
+
 void graph_display(const graph_t *graph);
 graph_t *graph_create(void);
 vertex_t *graph_add_vertex(graph_t *graph, const char *str);
